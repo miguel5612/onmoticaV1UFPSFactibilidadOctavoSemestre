@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Panel de control : ONMOTICA.com</title>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">	
+</head>
+<body>
+<!-- estilo -->
+
+<style type="text/css" media="screen">
+	
+body{
+	background-color: #CD1016		;
+}
+#bombillo1{
+	display: inline-block;
+	text-align: center;
+
+    margin-left: 50px;
+
+
+}
+#base{
+	background-image: url('https://ww2.ufps.edu.co/public/imagenes/template/header/header-superior-principal.jpg')
+}
+
+#onmotica{
+	    width: 13%;
+    	height: 50%;
+}
+#sociedad{
+
+    display: inline-block;
+    margin-right: 20px;
+
+}
+#presentacion{
+	color: white;
+	 text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+	 text-align: center;
+}
+#ventilador1{
+
+    color: white;
+    margin-left: 20px;
+    margin-right: 29px;
+
+    margin-left: 100px;
+
+}
+#ventilador{
+
+    color: white;
+    margin-left: 20px;
+    margin-right: 29px;
+
+    display: inline-block;
+
+}
+ #luz1{
+
+    color: white;
+    margin-left: 20px;
+    margin-right: 29px;
+
+    display: inline-block;
+
+}
+ #sistema_de_riego{
+
+    color: white;
+    margin-left: 20px;
+    margin-right: 29px;
+
+    display: inline-block;
+
+}
+#controladora{
+
+    margin-left: 150px;
+
+}
+
+
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
+</style>
+<!-- estilo -->
+<div id="base">
+	<img id="ufps" src="https://ww2.ufps.edu.co/public/imagenes/template/header/logo_ufps.png"></img>
+	<div id="sociedad">
+		<h5>en sociendad con : </h5>
+	</div>
+	<img id="onmotica" src="https://scontent.feoh3-1.fna.fbcdn.net/v/t1.0-9/13177664_188339021560929_4318705489603601638_n.jpg?oh=9758e74a135cff4da290d27255b1d1f9&oe=58B5D7B3"></img>
+</div>
+<div id="presentacion">
+	<a href="http://www.facebook.com/onmotica">	<h3>Onmotica es un proyecto desarrollado por </h3></a>
+		<a href="https://www.facebook.com/profile.php?id=100001860083385&fref=ts"> <h5>Miguel Califa</h5></a>
+		<a href="https://www.facebook.com/camilo.alvarez.165?fref=ts"><h5>Camilo	Alvarez</h5></a>
+</div>
+<div id="controladora">
+	<div id="luz1">
+		<h2>Encender luces</h2>
+		<img id="bombillo1" onclick="changeImage()" src="http://www.w3schools.com/js/pic_bulboff.gif" width="100" height="180">
+		<p>haz clic en la luz para encenderla :).</p>
+	</div>
+	<div id="ventilador">
+		<h2>Encender ventiladores</h2>
+		<img id="ventilador1" onclick="changeImage2()" src="https://thumb1.shutterstock.com/thumb_large/922952/922952,1326315094,10/stock-vector-fan-92527270.jpg" width="100" height="180">
+		<p>haz clic en el ventilador para encenderlo :).</p>
+	</div>
+	
+	<div id="sistema_de_riego">
+		<h2>sistema de riego</h2>
+		<img id="planta" onclick="changeImage3()" src="http://previews.123rf.com/images/braverabbit/braverabbit1204/braverabbit120400007/13097703-cute-little-cartoon-boy-watering-sprout-high-quality-3d-illustration-Stock-Illustration.jpg"" width="100" height="180" style="margin-left: 50px;">
+		<p>haz clic la planta para regarla :).</p>
+	</div>
+
+</div>
+
+
+<footer>
+	<div class="container">
+
+    <hr>
+        <div class="text-center center-block">
+            <p class="txt-railway">- onmotica.com.com -</p>
+            <br />
+                <a href="https://www.facebook.com/onmotica"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com/califaMac"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com/115227532803427344673"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="mailto:miguelangelcu@ufps.edu.co"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+</div>
+    <hr>
+</div>
+</footer>
+<!-- javascript -->
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+function changeImage() {
+    var image = document.getElementById('bombillo1');
+    if (image.src.match("bulbon")) {
+        image.src = "http://www.w3schools.com/js/pic_bulboff.gif";
+    } else {
+        image.src = "http://www.w3schools.com/js/pic_bulbon.gif";
+    }
+}
+function changeImage2() {
+    var image = document.getElementById('ventilador1');
+    console.log('imgmax');
+    if (image.src.match("imgmax")) {
+        image.src = "https://thumb1.shutterstock.com/thumb_large/922952/922952,1326315094,10/stock-vector-fan-92527270.jpg";
+    } else {
+    	console.log('on');
+        image.src = "http://lh3.ggpht.com/-YlhrEXOq10c/UeWN4BApaeI/AAAAAAAAAXE/RkPFfqyCNHM/ventilador_thumb.gif?imgmax=800";
+    }
+}
+function changeImage3() {
+    var image = document.getElementById('planta');
+    console.log('imgmax');
+    if (image.src.match("illustration")) {
+        image.src = "http://st2.depositphotos.com/1002927/7259/i/450/depositphotos_72595699-Cartoon-character-watering-a-plant.jpg";
+    } else {
+    	console.log('on');
+        image.src = "http://previews.123rf.com/images/braverabbit/braverabbit1204/braverabbit120400007/13097703-cute-little-cartoon-boy-watering-sprout-high-quality-3d-illustration-Stock-Illustration.jpg";
+    }
+}
+
+</script>
+
+<!-- Latest compiled and minified JavaScript -->
+<!-- end javascript-->
+
+</body>
+</html>
