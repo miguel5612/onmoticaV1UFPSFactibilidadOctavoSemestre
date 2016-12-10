@@ -1,0 +1,4 @@
+https://www.fayerwayer.com/2015/05/nodemcu-el-sucesor-de-arduino-integra-wi-fi-y-cuesta-menos-de-ocho-dolares/
+https://codebender.cc/utilities/download/206486
+http://ieeexplore.ieee.org/ielx7/6488907/6870505/06851114.pdf?tp=&arnumber=6851114&isnumber=6870505
+http://ieeexplore.ieee.org/ielx7/6287639/6514899/07752857.pdf?tp=&arnumber=7752857&isnumber=6514899

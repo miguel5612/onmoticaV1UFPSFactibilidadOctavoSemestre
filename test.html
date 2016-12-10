@@ -19,6 +19,13 @@
 body{
 	background-color: #CD1016		;
 }
+#divText{
+
+    margin-left: 60px;
+    margin-top: 15px;
+    color: white;
+
+}
 #bombillo1{
 	display: inline-block;
 	text-align: center;
@@ -135,6 +142,7 @@ body{
 		<a href="https://www.facebook.com/profile.php?id=100001860083385&fref=ts"> <h5>Miguel Califa</h5></a>
 		<a href="https://www.facebook.com/camilo.alvarez.165?fref=ts"><h5>Camilo	Alvarez</h5></a>
 </div>
+
 <div id="controladora">
 	<div id="luz1">
 		<h2>Encender luces</h2>
@@ -155,7 +163,9 @@ body{
 
 </div>
 
-
+<div id="divText">
+    <input id="server" type="text" style="color:black" value="192.168.1.62" placeholder="192.168.x.x">escribe la direccion del servidor</input>
+</div>
 <footer>
 	<div class="container">
 
@@ -179,11 +189,18 @@ body{
 
 <script>
 function changeImage() {
+    
     var image = document.getElementById('bombillo1');
     if (image.src.match("bulbon")) {
         image.src = "http://www.w3schools.com/js/pic_bulboff.gif";
+        url ="http://"+  localStorage.getItem("server")+"/light1off";
+        peticion(url);
+       
     } else {
         image.src = "http://www.w3schools.com/js/pic_bulbon.gif";
+       url ="http://"+  localStorage.getItem("server")+"/light1on";
+        peticion(url);
+       
     }
 }
 function changeImage2() {
@@ -191,9 +208,13 @@ function changeImage2() {
     console.log('imgmax');
     if (image.src.match("imgmax")) {
         image.src = "https://thumb1.shutterstock.com/thumb_large/922952/922952,1326315094,10/stock-vector-fan-92527270.jpg";
+        url ="http://"+  localStorage.getItem("server")+"/light2off";
+        peticion(url);
     } else {
     	console.log('on');
         image.src = "http://lh3.ggpht.com/-YlhrEXOq10c/UeWN4BApaeI/AAAAAAAAAXE/RkPFfqyCNHM/ventilador_thumb.gif?imgmax=800";
+        url ="http://"+  localStorage.getItem("server")+"/light2on";
+        peticion(url);
     }
 }
 function changeImage3() {
@@ -201,11 +222,40 @@ function changeImage3() {
     console.log('imgmax');
     if (image.src.match("illustration")) {
         image.src = "http://st2.depositphotos.com/1002927/7259/i/450/depositphotos_72595699-Cartoon-character-watering-a-plant.jpg";
+        url ="http://"+  localStorage.getItem("server")+"/light3on";
+        peticion(url);
     } else {
     	console.log('on');
         image.src = "http://previews.123rf.com/images/braverabbit/braverabbit1204/braverabbit120400007/13097703-cute-little-cartoon-boy-watering-sprout-high-quality-3d-illustration-Stock-Illustration.jpg";
+        url ="http://"+  localStorage.getItem("server")+"/light3off";
+        peticion(url);
     }
 }
+
+function peticion(url){
+     $.get(
+            url
+            
+            
+        );
+}
+$(function(){
+ $("#server").keypress(function (e) {
+    if (e.keyCode == 13) {
+        localStorage.setItem("server",$("#server").val());
+    }
+ });
+});
+
+$( document ).ready(function() {
+    url ="http://"+  localStorage.getItem("server")+"/light1off";
+        peticion(url);
+        url ="http://"+  localStorage.getItem("server")+"/light2off";
+        peticion(url);
+        url ="http://"+  localStorage.getItem("server")+"/light3off";
+        peticion(url);
+ });
+
 
 </script>
 
